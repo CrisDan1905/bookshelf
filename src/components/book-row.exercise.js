@@ -1,8 +1,5 @@
 /** @jsx jsx */
 import {jsx} from '@emotion/core'
-
-// We're going to turn the entire book row into a link to the book page
-// 🐨 import the Link component from react-router-dom
 import {Link} from 'react-router-dom'
 import * as mq from 'styles/media-queries'
 import * as colors from 'styles/colors'
@@ -21,10 +18,6 @@ function BookRow({book}) {
         position: 'relative',
       }}
     >
-      {/*
-          🐨 Turn this div into a Link
-          and add a to prop to make it direct to `/book/${book.id}`
-      */}
       <Link
         to={`/book/${book.id}`}
         aria-labelledby={id}

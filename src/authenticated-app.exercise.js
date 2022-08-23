@@ -2,15 +2,10 @@
 import {jsx} from '@emotion/core'
 
 import * as React from 'react'
-// We'll be doing a lot of stuff with the router on this page.
-// 🐨 Here's what you'll need to import from react-router-dom
-// Routes, Route, Link
 import {Routes, Route, Link, useMatch} from 'react-router-dom'
 import {Button} from './components/lib'
 import * as mq from './styles/media-queries'
 import * as colors from './styles/colors'
-// 🐨 you'll need to import all the screen components in the screens directory
-// 💰 DiscoverBooksScreen, BookScreen, NotFoundScreen
 import {DiscoverBooksScreen} from './screens/discover'
 import {BookScreen} from './screens/book.exercise'
 import {NotFoundScreen} from './screens/not-found.exercise'
@@ -61,7 +56,6 @@ function AuthenticatedApp({user, logout}) {
 
 function NavLink(props) {
   const matches = useMatch(props.to)
-  // 🐨 change this from an <a /> to a <Link />
   return (
     <Link
       css={[
@@ -115,10 +109,6 @@ function Nav() {
         }}
       >
         <li>
-          {/*
-              🐨 Once the NavLink has been updated to use a Router Link,
-                change from the href prop to a "to" prop
-          */}
           <NavLink to="/discover">Discover</NavLink>
         </li>
       </ul>
@@ -127,13 +117,6 @@ function Nav() {
 }
 
 function AppRoutes({user}) {
-  // 🐨 Return all the routes here.
-  // 💰 Here's the mapping of URL to element:
-  //     /discover         <DiscoverBooksScreen user={user} />
-  //     /book/:bookId     <BookScreen user={user} />
-  //     *                 <NotFoundScreen />
-  //
-  // Make sure to check the INSTRUCTIONS.md for how this should be structured
   return <Routes>
       <Route path="/discover" element={<DiscoverBooksScreen user={user}/>}/>
       <Route path="/book/:bookId" element={<BookScreen user={user}/>}/>
