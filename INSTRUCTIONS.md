@@ -2,7 +2,7 @@
 
 ## 📝 Your Notes
 
-Elaborate on your learnings here in `INSTRUCTIONS.md`
+use `screen.debug()` to see how is the dom assembled in that moment.
 
 ## Background
 
